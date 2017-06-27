@@ -1,0 +1,5 @@
+[2017-06-22 19:06:13] textlogger.ERROR: test [] {"file":"D:\\iab\\iabphp\\logger.php","line":28,"class":null,"function":"include"}
+[2017-06-22 19:07:47] textlogger.ERROR: test [] {"file":"D:\\iab\\iabphp\\logger.php","line":28,"class":null,"function":"include"}
+[2017-06-22 19:22:21] textlogger.ERROR: 1 [] {"file":"D:\\iab\\iabphp\\controllers\\login.php","line":58,"class":null,"function":null}
+[2017-06-22 19:23:24] textlogger.ERROR:  [] {"file":"D:\\iab\\iabphp\\controllers\\login.php","line":58,"class":null,"function":null}
+[2017-06-22 19:24:41] textlogger.ERROR: sa [] {"file":"D:\\iab\\iabphp\\controllers\\login.php","line":58,"class":null,"function":null}

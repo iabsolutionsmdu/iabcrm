@@ -1,0 +1,488 @@
+<html>
+
+<head>
+    <title>IAB Base</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="contents/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js">
+
+    </script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.4/js/buttons.flash.min.js">
+
+    </script>
+    <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js">
+
+    </script>
+    <script type="text/javascript" language="javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js">
+
+    </script>
+    <script type="text/javascript" language="javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js">
+
+    </script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js">
+
+    </script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js">
+    </script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.colVis.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/html5shiv.min.js"></script>
+        <script src="~/Scripts/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+        <script src="~/Scripts/excanvas.js"></script>
+        
+    <![endif]-->
+
+    <style>
+        body {
+            padding-top: 70px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+        /* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+
+
+
+
+        .modal1 {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba( 255, 255, 255, .8) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+        }
+        /* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+
+
+
+
+        body.loading {
+            overflow: hidden;
+        }
+        /* Anytime the body has the loading class, our
+   modal element will be visible */
+
+
+
+
+        body.loading .modal1 {
+            display: block;
+        }
+    </style>
+    <script type="text/javascript">
+        var fileApp = angular.module('fieldslistApp', []);
+        fileApp.controller('ddlFieldsList', function ($scope, $http) {
+            $http.get('getfieldslist.php').success(function (data) {
+                //console.log(data.COLUMN_NAME);
+                $scope.fldnames = data;
+            });
+
+            $('#ddlfields').on('change', function () {
+                var selectedvalue = $(this).val();
+                if (selectedvalue.length !== 4 || selectedvalue === 'slno') {
+                    return;
+                }
+                $.get('getfieldslist.php', { args: selectedvalue }, function (data) {
+                    //alert(data);
+                    var dt = $.parseJSON(data);
+                    var r = selectedvalue + "_mapped_colname";
+                    var x = '';
+                    $.each(dt, function (i, j) {
+                        x = x + j[r] + ' , ';
+                        //alert(j[r]);
+                    });
+                    //alert(x);
+                    $('#pref').html(x);
+                });
+                //alert(selectedvalue);
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <form name="formprocess">
+         <?php include '../menu.php' ?>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">REPOTS</div>
+
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="fdate">From Date:
+                                <input type="text" name="fdt" id="fdt" class="form-control"/>
+                                </label>
+                                    <label for="tdate">To Date:
+                                <input type="text" name="tdt" id="tdt" class="form-control"/>
+                                </label>
+                                    <div ng-app="fieldslistApp" ng-controller="ddlFieldsList">
+                                        <label for="select" class="control-label">Select Fields
+                                    <select name="ddlfields" id="ddlfields" aria-required="true" required class="form-control">
+                                        <option value="" label="Please Select"></option>
+                                        <option ng-repeat="n in fldnames" value="{{ n.COLUMN_NAME}}"
+                                                    ng-selected="{{ n.Selected == true}}">
+                                                    {{ n.COLUMN_NAME }}
+                                                    </option>
+                                    </select>
+
+                                </label>
+                                        <button type="button" class="btn btn-info btn-md" id="btnmodal" data-toggle="tooltip" title="Click to See Available columns">
+                                    <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+                                    </button>
+                                        <label for="txtfldval" class="control-label">Enter Value:
+                                   <input type="text" id="txtfldval" name="txtfldval" required aria-required="true" class="form-control"></input>
+                                
+                                </label>
+                                        <button class="btn btn-info btn-md" id="btnadd" name="btnand" data-toggle="tooltip" title="Click to Add constraints">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                </button>
+                                    </div>
+                                    <ul class="list-inline">
+                                        <li><button class="btn btn-md btn-success" id="btnand" name="btnand">And</button></li>
+                                        <li><button class="btn btn-md btn-warning" id="btnor" name="btnor">OR</button></li>
+                                        <li><button class="btn btn-md btn-warning" id="btnnot" name="btnnot">Not</button></li>
+                                        <li><button class="btn btn-md btn-info" id="btnlike" name="btnlike">Like</button></li>
+                                        <li><button class="btn btn-md btn-default" id="btnclearlast" name="btnclearlast">Clear Last condition</button></li>
+                                        <li><button class="btn btn-md btn-default" id="btnclearall" name="btnclearall">Clear all</button></li>
+                                    </ul>
+                                    <div class="row">
+                                        <input type="text" id="txtqry" name="txtqry" class="form-control"></input>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="panel-footer">
+                            <button type="button" name="btnSubmit" id="btnSubmit" class="btn btn-info" onclick="return confirm('Sure to Process?');">Process File </button>
+                            <div class="form-group pull-right">
+                                <label for="txtlimit" class="control-label col-sm-3">Limit</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="txtlimit" name="txtlimit" value="5000"></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="table" id="reportdata" style="overflow: auto;">
+                        <table id="reporttable" class="display" cellspacing="0">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Ref Fields</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="pref"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+          <div class="modal1">
+        <!-- Place at bottom of page -->
+         </div>
+        <input type="hidden" id="hdnlastcondt" name="hdnlastcondt" class="hidden aria-hidden" />
+        <script type="text/javascript">
+            $body = $("body");
+
+            $(document).on({
+                 ajaxStart: function() { $body.addClass("loading");    },
+                  ajaxStop: function() { $body.removeClass("loading"); }    
+            });
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+                $('#btnmodal').on('click', function (e) {
+
+                    $('#myModal').modal('show');
+
+                });
+                $(function () {
+                    $("#fdt").datepicker({
+                        numberOfMonths: 1,
+                        dateFormat: 'yy-mm-dd',
+                        onSelect: function (selected) {
+                            var dt = new Date(selected);
+                            dt.setDate(dt.getDate() + 1);
+                            $("#tdt").datepicker("option", "minDate", dt);
+                        }
+                    }).datepicker("setDate", new Date());
+
+                    $("#tdt").datepicker({
+                        numberOfMonths: 1,
+                        dateFormat: 'yy-mm-dd',
+                        onSelect: function (selected) {
+                            var dt = new Date(selected);
+                            dt.setDate(dt.getDate() - 1);
+                            $("#fdt").datepicker("option", "maxDate", dt);
+                        }
+                    });
+                });
+                var d = new Date();
+                var curdate = d.getFullYear() + "-" + ('0' + (d.getMonth() + 1)).slice(-2) + "-" + ('0' + (d.getDate())).slice(-2);
+                // $('#btnSubmit').on('click', function (e) {
+                //     e.preventDefault();
+                // });
+
+                $('#btnadd').on('click', function (e) {
+                    e.preventDefault();
+                    var qry = "";
+                    if ($.trim($('#txtfldval').val()) === "") {
+                        qry = $('#txtqry').val() + $('#ddlfields').val() + " ";
+                        $('#hdnlastcondt').val($('#ddlfields').val() + " ");
+                    } else {
+                        var qry = $('#txtqry').val() + $('#ddlfields').val() + " = " + "'" + $('#txtfldval').val() + "' , ";
+                        $('#hdnlastcondt').val($('#ddlfields').val() + " = " + "'" + $('#txtfldval').val() + "' , ");
+                    }
+
+                    $('#txtqry').val(qry);
+
+                });
+
+
+
+                $('#btnand , #btnor ,#btnnot').on('click', function (e) {
+                    e.preventDefault();
+                    var constr = $(this).text();
+                    var m = $.trim($('#hdnlastcondt').val());
+                    alert(m);
+                    if (m === 'And' || m === 'OR' || m === 'Not') {
+                        alert('Cannot pad double constraints');
+                        return false;
+                    }
+                    if (constr === 'Not') {
+                        var retval = prompt("Enter the value :", "");
+                        if ($.trim(retval) === "") {
+                            return false;
+                        }
+                        constr = '<> ' + "'" + retval + "' ";
+                    }
+                    $('#hdnlastcondt').val(constr);
+                    var s1 = $('#txtqry').val();
+                    s1 = s1.replace(/,\s*$/, '');
+                    var qry = s1 + " " + constr + " ";
+                    $('#txtqry').val(qry);
+
+                });
+
+                $('#btnclearlast').on('click', function (e) {
+                    e.preventDefault();
+                    var s1 = $('#txtqry').val();
+                    s1 = s1.replace(/,\s*$/, '');
+                    var n = s1.lastIndexOf(",");
+                    //alert(n);
+                    var s2 = '';
+                    if (n === -1) {
+
+                        var x = $.trim($('#hdnlastcondt').val()).length;
+                        var y = $.trim(s1).length;
+
+                        y = y - x;
+
+
+                        s2 = s1.substr(0, y + 2);
+
+                    } else {
+                        s2 = s1.substr(0, n);
+                    }
+                    $('#txtqry').val(s2);
+                });
+
+                $('#btnclearall').on('click', function (e) {
+                    e.preventDefault();
+                    $("input[type ='text']").val("");
+                        $("#txtlimit").val('50000');
+                });
+
+
+                $('#btnSubmit').on('click', function (e) {
+                    e.preventDefault();
+                    var s1 = $.trim($('#txtqry').val());
+                    var list = ['And', 'OR', '<>', 'Like'];
+                    s1 = s1.replace(/,\s*$/, '');
+                    for (var i = 0; i < list.length; i++) {
+                        if (s1.endsWith(list[i])) {
+                            s1 = s1.replace(new RegExp(list[i] + '$'), '');
+                            // alert(s1);
+                        }
+                    }
+                    //alert(s1);
+                    $('#txtqry').val(s1);
+                    if ($.trim($('#fdt').val()) !== "" && $.trim($('#tdt').val()) !== "") {
+                        if (s1.length == 0 || s1 === '') {
+                            s1 = s1 + " upload_date between '" + $('#fdt').val() + "' and '" + $('#tdt').val() + "'";
+                        } else {
+                            s1 = s1 + " and upload_date between '" + $('#fdt').val() + "' and '" + $('#tdt').val() + "'";
+                        }
+                    }
+                    var qry = "select * from mstbase where " + s1 + " limit " + $("#txtlimit").val();
+                    $.ajax({
+                        async: false,
+                        type: 'GET',
+                        url: 'getfieldslist.php',
+                        data: {args:qry},
+                        success: function(data){
+                    //$.get('getfieldslist.php', { args: qry }, function (data) {
+                        //alert(data);
+
+                        // if (data.indexOf("exception") !== -1 || data.indexOf("error") !== -1) {
+                        //     alert(data);
+                        //     return;
+                        // }
+                        if (data.length <= 0) {
+                            alert("no record found");
+                            return;
+                        }
+                        var dt = $.parseJSON(data);
+                        //console.log(dt.length);
+                        //console.log($.isEmptyObject(dt));
+                        if ($.isEmptyObject(dt)) {
+                            alert("no record found");
+                            return;
+                        }
+                        try{
+                            if (  $.fn.DataTable.isDataTable( '#reporttable' ) ) {
+                              
+                                 var otable = $('#reportdata').find('#reporttable').DataTable();
+                               // otable.fnClearTable();
+                                 otable.destroy();
+                                 $('#reportdata').find('#reporttable').empty();
+
+                        
+                                
+                            }
+                        
+                        }catch(err){
+                            console.log(err);
+                        }
+                        var t0 = performance.now();
+                        var $tbl = $('#reporttable');
+                        $tbl.remove('thead');
+                        var flds = [];
+                        flds.push("<thead><tr><th>Mobile No</th><th>Service Provider</th>");
+                        flds.push("<th>customer firstname</th><th>customer lastname</th>");
+                        flds.push("<th>customer address1</th><th>customer address2</th><th>customer address3</th>");
+                        flds.push("<th>customer state</th><th>customer country</th><th>Pincode</th>");
+                        flds.push("<th>Base Name</th><th>campaign_name</th><th>fld1</th>");
+                        flds.push("<th>fld2</th><th>fld3</th><th>fld4</th><th>fld5</th><th>fld6</th><th>fld7</th>");
+                        flds.push("<th>fld8</th><th>fld9</th><th>fld10</th><th>fld11</th><th>fld12</th><th>fld13</th>");
+                        flds.push("<th>fld14</th><th>fld15</th><th>fld16</th><th>fld17</th><th>fld18</th><th>fld19</th>");
+                        flds.push("<th>fld20</th></tr></thead>");
+                        $(dt).each(function (i, j) {
+                            flds.push("<tr>");
+                            flds.push("<td>" + j.Mobileno + "</td>");
+                            flds.push("<td>" + j.service_provider + "</td>");
+                            flds.push("<td>" + j.customer_firstname + "</td>");
+                            flds.push("<td>" + j.customer_lastname + "</td>");
+                            flds.push("<td>" + j.customer_address1 + "</td>");
+                            flds.push("<td>" + j.customer_address2 + "</td>");
+                            flds.push("<td>" + j.customer_address3 + "</td>");
+                            flds.push("<td>" + j.customer_state + "</td>");
+                            flds.push("<td>" + j.customer_country + "</td>");
+                            flds.push("<td>" + j.pincode + "</td>");
+                            flds.push("<td>" + j.base_name + "</td>");
+                            flds.push("<td>" + j.campaign_name + "</td>");
+                            flds.push("<td>" + j.fld1 + "</td>");
+                            flds.push("<td>" + j.fld2 + "</td>");
+                            flds.push("<td>" + j.fld3 + "</td>");
+                            flds.push("<td>" + j.fld4 + "</td>");
+                            flds.push("<td>" + j.fld5 + "</td>");
+                            flds.push("<td>" + j.fld6 + "</td>");
+                            flds.push("<td>" + j.fld7 + "</td>");
+                            flds.push("<td>" + j.fld8 + "</td>");
+                            flds.push("<td>" + j.fld9 + "</td>");
+                            flds.push("<td>" + j.fld10 + "</td>");
+                            flds.push("<td>" + j.fld11 + "</td>");
+                            flds.push("<td>" + j.fld12 + "</td>");
+                            flds.push("<td>" + j.fld13 + "</td>");
+                            flds.push("<td>" + j.fld14 + "</td>");
+                            flds.push("<td>" + j.fld15 + "</td>");
+                            flds.push("<td>" + j.fld16 + "</td>");
+                            flds.push("<td>" + j.fld17 + "</td>");
+                            flds.push("<td>" + j.fld18 + "</td>");
+                            flds.push("<td>" + j.fld19 + "</td>");
+                            flds.push("<td>" + j.fld20 + "</td>");
+                            flds.push("</tr>");
+
+                        });
+                        $tbl.append(flds.join());
+                        var table = $('#reportdata').find('#reporttable').DataTable({
+                            destroy: true,
+                            dom: 'Bfrtip',
+                            buttons: [
+                                'csv', 'print' ,'colvis'
+                            ],
+                            "pageLength": 25
+                        });
+                        var t1 = performance.now();
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+                        //   tbl= $( '#reportdata' ).find('#reporttable').DataTable({
+                        //         dom: 'Bfrtip',
+                        //         buttons: [
+                        //             'csv', 'print'
+                        //         ]});
+                        },
+                        error:function(jqxhr,errorStatus,errorType){
+                            alert('error');
+                        }
+                    }).fail(function (ret) {
+                        alert("fail");
+                    });
+
+
+                });
+
+
+                //$( '#reportdata' ).find('#reporttable').find("#reporttable_paginate").on("click", "a", function() { alert("clicked") });
+                $( '#reportdata' ).find('#reporttable').find('#reporttable_next').on('click', function () {
+                    alert('test');
+                })
+
+            });
+        </script>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+{
+    "require": {
+        "monolog/monolog": "^1.23",
+        "swiftmailer/swiftmailer": "^6.0",
+        "fpdo/fluentpdo": "1.1.*"
+    }
+}

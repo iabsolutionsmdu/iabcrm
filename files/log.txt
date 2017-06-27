@@ -1,0 +1,234 @@
+[23-Jun-2017 15:44:58 Asia/Kolkata] PHP Fatal error:  Cannot declare class FluentPDO, because the name is already in use in D:\iab\iabphp\vendor\fpdo\fluentpdo\FluentPDO\FluentPDO.php on line 27
+[23-Jun-2017 16:00:28 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in D:\iab\iabphp\Index.php on line 13
+[23-Jun-2017 16:00:53 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in D:\iab\iabphp\Index.php on line 13
+[23-Jun-2017 16:01:32 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in D:\iab\iabphp\Index.php on line 13
+[23-Jun-2017 16:02:13 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in D:\iab\iabphp\Index.php on line 13
+[23-Jun-2017 16:02:57 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in D:\iab\iabphp\Index.php on line 13
+[23-Jun-2017 16:03:58 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in D:\iab\iabphp\Index.php on line 13
+[23-Jun-2017 16:04:26 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in D:\iab\iabphp\Index.php on line 13
+[23-Jun-2017 16:26:39 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in D:\iab\iabphp\Index.php on line 13
+[23-Jun-2017 16:29:33 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in D:\iab\iabphp\Index.php on line 13
+[24-Jun-2017 06:06:21 UTC] PHP Notice:  Undefined index: user in C:\wamp\www\iabcrm\controllers\checkauthentication.php on line 7
+[24-Jun-2017 06:06:21 UTC] PHP Stack trace:
+[24-Jun-2017 06:06:21 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 06:06:21 UTC] PHP   2. include() C:\wamp\www\iabcrm\Index.php:2
+[24-Jun-2017 06:06:49 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 06:06:49 UTC] PHP Stack trace:
+[24-Jun-2017 06:06:49 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 06:06:49 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 06:08:38 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 06:08:38 UTC] PHP Stack trace:
+[24-Jun-2017 06:08:38 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 06:08:38 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 06:08:48 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 06:08:48 UTC] PHP Stack trace:
+[24-Jun-2017 06:08:48 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 06:08:48 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 06:09:14 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 06:09:14 UTC] PHP Stack trace:
+[24-Jun-2017 06:09:14 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 06:09:14 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 07:03:34 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 07:03:34 UTC] PHP Stack trace:
+[24-Jun-2017 07:03:34 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 07:03:34 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 07:08:42 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 07:08:42 UTC] PHP Stack trace:
+[24-Jun-2017 07:08:42 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 07:08:42 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 10:05:35 UTC] PHP Notice:  Undefined index: user in C:\wamp\www\iabcrm\controllers\checkauthentication.php on line 7
+[24-Jun-2017 10:05:35 UTC] PHP Stack trace:
+[24-Jun-2017 10:05:35 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:05:35 UTC] PHP   2. include() C:\wamp\www\iabcrm\Index.php:2
+[24-Jun-2017 10:07:03 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 10:07:03 UTC] PHP Stack trace:
+[24-Jun-2017 10:07:03 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:07:03 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 10:07:14 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 10:07:14 UTC] PHP Stack trace:
+[24-Jun-2017 10:07:14 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:07:14 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 10:07:28 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 10:07:28 UTC] PHP Stack trace:
+[24-Jun-2017 10:07:28 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:07:28 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 10:24:24 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 10:24:24 UTC] PHP Stack trace:
+[24-Jun-2017 10:24:24 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:24:24 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 10:24:25 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 10:24:25 UTC] PHP Stack trace:
+[24-Jun-2017 10:24:25 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:24:25 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 10:48:27 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 10:48:27 UTC] PHP Stack trace:
+[24-Jun-2017 10:48:27 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:48:27 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 10:51:19 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 10:51:19 UTC] PHP Stack trace:
+[24-Jun-2017 10:51:19 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:51:19 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 10:55:13 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 10:55:13 UTC] PHP Stack trace:
+[24-Jun-2017 10:55:13 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:55:13 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 10:55:20 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 10:55:20 UTC] PHP Stack trace:
+[24-Jun-2017 10:55:20 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 10:55:20 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 11:09:31 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 11:09:31 UTC] PHP Stack trace:
+[24-Jun-2017 11:09:31 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 11:09:31 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 11:42:21 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 11:42:21 UTC] PHP Stack trace:
+[24-Jun-2017 11:42:21 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 11:42:21 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[24-Jun-2017 13:13:49 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[24-Jun-2017 13:13:49 UTC] PHP Stack trace:
+[24-Jun-2017 13:13:49 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[24-Jun-2017 13:13:49 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 06:17:27 UTC] PHP Notice:  Undefined index: user in C:\wamp\www\iabcrm\controllers\checkauthentication.php on line 7
+[26-Jun-2017 06:17:27 UTC] PHP Stack trace:
+[26-Jun-2017 06:17:27 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 06:17:27 UTC] PHP   2. include() C:\wamp\www\iabcrm\Index.php:2
+[26-Jun-2017 06:20:03 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 06:20:03 UTC] PHP Stack trace:
+[26-Jun-2017 06:20:03 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 06:20:03 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:11:39 UTC] PHP Notice:  Undefined index: user in C:\wamp\www\iabcrm\controllers\checkauthentication.php on line 7
+[26-Jun-2017 07:11:39 UTC] PHP Stack trace:
+[26-Jun-2017 07:11:39 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:11:39 UTC] PHP   2. include() C:\wamp\www\iabcrm\Index.php:2
+[26-Jun-2017 07:11:49 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 07:11:49 UTC] PHP Stack trace:
+[26-Jun-2017 07:11:49 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:11:49 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:12:14 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 07:12:14 UTC] PHP Stack trace:
+[26-Jun-2017 07:12:14 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:12:14 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:13:57 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 07:13:57 UTC] PHP Stack trace:
+[26-Jun-2017 07:13:57 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:13:57 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:17:05 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 07:17:05 UTC] PHP Stack trace:
+[26-Jun-2017 07:17:05 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:17:05 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:17:26 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 07:17:26 UTC] PHP Stack trace:
+[26-Jun-2017 07:17:26 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:17:26 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:18:09 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 07:18:09 UTC] PHP Stack trace:
+[26-Jun-2017 07:18:09 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:18:09 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:41:51 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 07:41:51 UTC] PHP Stack trace:
+[26-Jun-2017 07:41:51 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:41:51 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:42:16 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\controllers\processbase.php on line 87
+[26-Jun-2017 07:42:16 UTC] PHP Stack trace:
+[26-Jun-2017 07:42:16 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\controllers\processbase.php:0
+[26-Jun-2017 07:42:16 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\controllers\processbase.php:87
+[26-Jun-2017 07:48:48 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 07:48:48 UTC] PHP Stack trace:
+[26-Jun-2017 07:48:48 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:48:48 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:59:27 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\controllers\processbase.php on line 87
+[26-Jun-2017 07:59:27 UTC] PHP Stack trace:
+[26-Jun-2017 07:59:27 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\controllers\processbase.php:0
+[26-Jun-2017 07:59:27 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\controllers\processbase.php:87
+[26-Jun-2017 07:59:53 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 07:59:53 UTC] PHP Stack trace:
+[26-Jun-2017 07:59:53 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 07:59:53 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 07:59:59 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\controllers\processbase.php on line 87
+[26-Jun-2017 07:59:59 UTC] PHP Stack trace:
+[26-Jun-2017 07:59:59 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\controllers\processbase.php:0
+[26-Jun-2017 07:59:59 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\controllers\processbase.php:87
+[26-Jun-2017 08:00:38 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 08:00:38 UTC] PHP Stack trace:
+[26-Jun-2017 08:00:38 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 08:00:38 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 08:02:27 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\controllers\processbase.php on line 87
+[26-Jun-2017 08:02:27 UTC] PHP Stack trace:
+[26-Jun-2017 08:02:27 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\controllers\processbase.php:0
+[26-Jun-2017 08:02:27 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\controllers\processbase.php:87
+[26-Jun-2017 08:03:09 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 08:03:09 UTC] PHP Stack trace:
+[26-Jun-2017 08:03:09 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 08:03:09 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 08:04:14 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 08:04:14 UTC] PHP Stack trace:
+[26-Jun-2017 08:04:14 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 08:04:14 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 08:04:39 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 08:04:39 UTC] PHP Stack trace:
+[26-Jun-2017 08:04:39 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 08:04:39 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 08:04:47 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 08:04:47 UTC] PHP Stack trace:
+[26-Jun-2017 08:04:47 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 08:04:47 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 08:05:37 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 08:05:37 UTC] PHP Stack trace:
+[26-Jun-2017 08:05:37 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 08:05:37 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 08:07:37 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 08:07:37 UTC] PHP Stack trace:
+[26-Jun-2017 08:07:37 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 08:07:37 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 08:56:08 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 08:56:08 UTC] PHP Stack trace:
+[26-Jun-2017 08:56:08 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 08:56:08 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 09:26:19 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 09:26:19 UTC] PHP Stack trace:
+[26-Jun-2017 09:26:19 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 09:26:19 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[26-Jun-2017 09:33:41 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[26-Jun-2017 09:33:41 UTC] PHP Stack trace:
+[26-Jun-2017 09:33:41 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[26-Jun-2017 09:33:41 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[27-Jun-2017 04:53:10 UTC] PHP Notice:  Undefined index: user in C:\wamp\www\iabcrm\controllers\checkauthentication.php on line 7
+[27-Jun-2017 04:53:10 UTC] PHP Stack trace:
+[27-Jun-2017 04:53:10 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 04:53:10 UTC] PHP   2. include() C:\wamp\www\iabcrm\Index.php:2
+[27-Jun-2017 04:56:21 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[27-Jun-2017 04:56:21 UTC] PHP Stack trace:
+[27-Jun-2017 04:56:21 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 04:56:21 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[27-Jun-2017 04:58:47 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[27-Jun-2017 04:58:47 UTC] PHP Stack trace:
+[27-Jun-2017 04:58:47 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 04:58:47 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[27-Jun-2017 04:58:49 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[27-Jun-2017 04:58:49 UTC] PHP Stack trace:
+[27-Jun-2017 04:58:49 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 04:58:49 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[27-Jun-2017 04:59:00 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[27-Jun-2017 04:59:00 UTC] PHP Stack trace:
+[27-Jun-2017 04:59:00 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 04:59:00 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[27-Jun-2017 05:00:08 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[27-Jun-2017 05:00:08 UTC] PHP Stack trace:
+[27-Jun-2017 05:00:08 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 05:00:08 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[27-Jun-2017 05:05:10 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[27-Jun-2017 05:05:10 UTC] PHP Stack trace:
+[27-Jun-2017 05:05:10 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 05:05:10 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[27-Jun-2017 05:06:19 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[27-Jun-2017 05:06:19 UTC] PHP Stack trace:
+[27-Jun-2017 05:06:19 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 05:06:19 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[27-Jun-2017 05:08:22 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[27-Jun-2017 05:08:22 UTC] PHP Stack trace:
+[27-Jun-2017 05:08:22 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 05:08:22 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
+[27-Jun-2017 05:22:56 UTC] PHP Notice:  A session had already been started - ignoring session_start() in C:\wamp\www\iabcrm\Index.php on line 13
+[27-Jun-2017 05:22:56 UTC] PHP Stack trace:
+[27-Jun-2017 05:22:56 UTC] PHP   1. {main}() C:\wamp\www\iabcrm\Index.php:0
+[27-Jun-2017 05:22:56 UTC] PHP   2. session_start() C:\wamp\www\iabcrm\Index.php:13
